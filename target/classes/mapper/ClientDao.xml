@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mbste.dao.ClientDao">
+
+    <sql id="pagination">
+        <if test="offset!=null">
+            LIMIT #{offset}
+            <if test="count!=null">
+                ,#{count}
+            </if>
+        </if>
+    </sql>
+    <sql id="client_column">
+        id AS clientId ,
+        phone_number AS phoneNumber,
+        username AS username,
+        password AS password,
+        email AS email,
+        profile_image AS profileImage,
+        service_id AS serviceId
+        create_time AS createTime,
+        status AS status
+    </sql>
+    <sql id="client_filter">
+        <if test="clientId!=null">
+            AND client_id=#{clientId}
+        </if>
+        <if test="phoneNumber!=null">
+            AND phone_number=#{phoneNumber}
+        </if>
+        <if test="username!=null">
+            AND username=#{username}
+        </if>
+        <if test="password!=null">
+            AND password=#{password}
+        </if>
+        <if test="email!=null">
+            AND email=#{email}
+        </if>
+        <if test="serviceId!=null">
+            AND service_id=#{serviceId}
+        </if>
+
+    </sql>
+
+
+    <sql id="update_filter">
+        <if test="email!=null">email=#{email}</if>
+        <if test="username!=null">
+            username=#{username}
+        </if>
+        <if test="phoneNumber!=null">
+            phone_number=#{phoneNumber}
+        </if>
+    </sql>
+
+
+    <select id="getAll" parameterType="map" resultType="com.mbste.model.Client">
+        SELECT * FROM clients WHERE 1
+        <include refid="client_filter"/>
+        AND status!=99
+        <!--ORDER BY create_time DESC-->
+        <!--<include refid="pagination"/>-->
+        <!--SELECT * FROM client WHERE 1-->
+    </select>
+
+    <select id="findImageById" parameterType="java.lang.Integer" resultType="java.lang.String">
+        SELECT profile_image FROM clients WHERE client_id=#{clientId} AND status!=99
+    </select>
+
+    <select id="findById" parameterType="java.lang.Integer" resultType="com.mbste.model.Client">
+        SELECT
+        <include refid="client_column"/>
+        FROM clients WHERE id=#{clientId}
+        AND status!=99
+    </select>
+
+    <select id="findByUsername" parameterType="java.lang.String" resultType="com.mbste.model.Client">
+        SELECT * FROM clients WHERE username=#{username} AND status!=99
+    </select>
+
+
+    <insert id="createClient" parameterType="map">
+        INSERT INTO clients
+        (phone_number,username,password,email, profile_image,create_time)
+        VALUES (#{phoneNumber},#{username},#{password},#{email}, #{profileImage},#{createTime})
+    </insert>
+    <update id="updateClient" parameterType="map">
+        UPDATE clients SET <include refid="update_filter"/>
+        WHERE client_id=#{clientId} and status!=99
+    </update>
+    <select id="count" resultType="int">
+        SELECT COUNT(*) FROM clients WHERE 1=1
+        <include refid="client_filter"/>
+    </select>
+
+    <update id="changeProfileImage" parameterType="map">
+        UPDATE clients SET profile_image =#{profileImage} WHERE id=#{clientId}
+    </update>
+
+    <update id="changePassword" parameterType="map">
+        UPDATE clients SET password =#{password} WHERE client_id=#{clientId}
+    </update>
+
+    <select id="getPassword" parameterType="java.lang.Integer" resultType="java.lang.String">
+        SELECT password FROM clients WHERE client_id=#{clientId} AND status!=99
+    </select>
+
+</mapper>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mbste.dao.AppoitementDao">
+
+    <sql id="pagination">
+        <if test="offset!=null">
+            LIMIT #{offset}
+            <if test="count!=null">
+                ,#{count}
+            </if>
+        </if>
+    </sql>
+
+    <sql id="filter">
+    <if test="id!=null">
+        AND id>#{id}
+    </if>
+    <if test="clientId!=null">
+        AND client_id=#{clientId}
+    </if>
+        <if test="techId!=null">
+            AND tech_id=#{techId}
+        </if>
+        <if test="status!=null">
+         AND status=#{status}
+        </if>
+
+    </sql>
+
+
+    <select id="countAll" resultType="int" parameterType="map">
+        SELECT COUNT(*) FROM appointments WHERE status!=99
+        <include refid="filter"/>
+    </select>
+
+    <select id="getAll" parameterType="map" resultType="com.mbste.model.Appoitement">
+        SELECT * FROM appointments
+        WHERE appointments.status!=99
+        <include refid="filter"/>
+        order by id
+    </select>
+    <select id="findById" parameterType="map" resultType="com.mbste.model.Appoitement">
+        SELECT * FROM appointments WHERE status!=99
+        <include refid="filter"/>
+    </select>
+    <select id="findByClientId" parameterType="map" resultType="com.mbste.model.Appoitement">
+        SELECT * FROM appoitements where 1
+        <include refid="filter"/>
+    </select>
+    <insert id="createAppoitement" parameterType="map">
+        INSERT INTO appoitements(client_id,tech_id,create_time,done_time,plaque,description,service_id,tech_name)
+        VALUES
+        (#{clientId},#{techId},#{createTime},#{doneTime},#{plaque},#{description},#{serviceId},#{techName})
+    </insert>
+    <update id="updateAppoitement" parameterType="map">
+        update appointments set description=#{description} where client_id=#{clientId} and id=#{appoitementId}
+        AND status!=99 AND status!=0
+    </update>
+    <update id="makeFeedback" parameterType="map">
+        update appointments set feedback=#{feedback} where client_id=#{clientId} and id=#{appoitementId}
+        AND status!=1 and status!=99
+    </update>
+    <update id="rate" parameterType="map">
+        update appoitements set rate=#{rate} where client_id=#{clientId} and id=#{appoitementId}
+        AND status!=1 AND status!=99
+    </update>
+    <select id="getRates" parameterType="map" resultType="java.lang.Integer">
+        select rate From appoitements where tech_id=#{techId}
+    </select>
+
+    <update id="delete" parameterType="map">
+        update appoitements set status==99 where 1
+        <include refid="filter"/>
+    </update>
+</mapper>
