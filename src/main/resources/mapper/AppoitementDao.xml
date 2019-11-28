@@ -13,7 +13,7 @@
 
     <sql id="filter">
     <if test="id!=null">
-        AND id>#{id}
+        AND appoitement_id>#{id}
     </if>
     <if test="clientId!=null">
         AND client_id=#{clientId}
@@ -48,9 +48,9 @@
         <include refid="filter"/>
     </select>
     <insert id="createAppoitement" parameterType="map">
-        INSERT INTO appoitements(client_id,tech_id,create_time,done_time,plaque,description,service_id,tech_name)
+        INSERT INTO appoitements(client_id,tech_id,done_time,description,service_id,tech_name)
         VALUES
-        (#{clientId},#{techId},#{createTime},#{doneTime},#{plaque},#{description},#{serviceId},#{techName})
+        (#{clientId},#{techId},#{doneTime},#{description},#{serviceId},#{techName})
     </insert>
     <update id="updateAppoitement" parameterType="map">
         update appointments set description=#{description} where client_id=#{clientId} and id=#{appoitementId}

@@ -13,7 +13,7 @@ public interface ApoitementService
 
     public String getAppoitementByAppoitementId(AppoitementFilter filter);
 
-    public String  createAppoitement(AppoitementForm form);
+    public Integer  createAppoitement(AppoitementForm form);
 
     public String deleteAppoitement(AppoitementFilter form);
 

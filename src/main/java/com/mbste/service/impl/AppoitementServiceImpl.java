@@ -43,15 +43,15 @@ public class AppoitementServiceImpl implements ApoitementService
     }
 
     @Override
-    public String createAppoitement(AppoitementForm form) {
+    public Integer createAppoitement(AppoitementForm form) {
         int result;
         form.convertDate();
         result=dao.createAppoitement(form);
         if (result>0){
-        return "done";
+        return 1;
         }
         else
-            return "fail";
+            return 0;
     }
 
     @Override

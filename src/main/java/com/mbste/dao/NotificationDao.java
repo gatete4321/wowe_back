@@ -14,13 +14,4 @@ public interface NotificationDao
     Integer createNotification(Notification notification);
 
     Integer deleteNotification(NoficationFilter filter);
-
-    Integer updateviewd(NoficationFilter filter);
-
-    /**
-     * for the futere whwen i started to use local database in android
-     * i will make
-     *     List<Notification> getNewNotification(NoficationFilter filter);
-     */
-
 }

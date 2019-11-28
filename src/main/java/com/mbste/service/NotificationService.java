@@ -14,5 +14,5 @@ public interface NotificationService
 
     public Integer deleteNotification(NoficationFilter filter);
 
-    public Integer updateView(NoficationFilter filter);
+
 }

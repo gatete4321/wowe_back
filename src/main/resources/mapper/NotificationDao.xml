@@ -2,6 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.mbste.dao.NotificationDao">
     <sql id="filter">
+        <if test="clientId!=null">
+            AND uyikorewe_id=#{clientId}
+        </if>
         <if test="notificationId!=null">
             AND notification_id=#{notificationId}
         </if>
@@ -9,38 +12,27 @@
             AND uwayikoze_id=#{uwayikozeId}
         </if>
 
-        <if test="uyikoreweId!=null">
-            AND uyikorewe_id=#{uyikoreweId}
-        </if>
         <if test="appoitementId!=null">
             AND appoitement_id=#{appoitementId}
         </if>
     </sql>
     <select id="getNotification" parameterType="map" resultType="com.mbste.model.Notification">
-        select * from notification where status!=99
+        select * from notifications where status!=99
         <include refid="filter"/>
     </select>
 
 
 
     <update id="deleteNotification" parameterType="map">
-        update notification set status==99 where status!=99
+        update notifications set status==99 where status!=99
         <include refid="filter"/>
     </update>
-
-
-    <update id="updateviewd" parameterType="map">
-        update notification set status==1 where status!=99
-        <include refid="filter"/>
-    </update>
-
-
 
 
 
     <insert id="createNotification" parameterType="map">
-        insert into notification(notfication_id,appoitement_id,action_id,uwayikoze_id,uyikorewe_id)
-        values(#{notficationId},#{appoitementId},#{actionId},#{uwayikozeId},#{uyikoreweId})
+        insert into notifications(notfication_id,appoitement_id,action_id,uwayikoze_id,uyikorewe_id,uwayikozeName)
+        values(#{notficationId},#{appoitementId},#{actionId},#{uwayikozeId},#{uyikoreweId},#{uwayikoze_name})
     </insert>
 
 </mapper>

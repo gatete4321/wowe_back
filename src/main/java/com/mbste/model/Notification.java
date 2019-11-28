@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Notification
 {
-    private Integer notficationId;
+    private Integer notificationId;
 
     private Integer appoitementId;
 
@@ -18,12 +18,24 @@ public class Notification
 
     private Integer uyikoreweId;
 
-    public Integer getNotficationId() {
-        return notficationId;
+    private String uwayikozeName;
+
+    private Integer recentNotificationId;
+
+    public Integer getRecentNotificationId() {
+        return recentNotificationId;
     }
 
-    public void setNotficationId(Integer notficationId) {
-        this.notficationId = notficationId;
+    public void setRecentNotificationId(Integer recentNotificationId) {
+        this.recentNotificationId = recentNotificationId;
+    }
+
+    public Integer getNotificationId() {
+        return notificationId;
+    }
+
+    public void setNotificationId(Integer notificationId) {
+        this.notificationId = notificationId;
     }
 
     public Integer getAppoitementId() {
@@ -72,5 +84,13 @@ public class Notification
 
     public void setDoneTime(Date doneTime) {
         this.doneTime = doneTime;
+    }
+
+    public String getUwayikozeName() {
+        return uwayikozeName;
+    }
+
+    public void setUwayikozeName(String uwayikozeName) {
+        this.uwayikozeName = uwayikozeName;
     }
 }

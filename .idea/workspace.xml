@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34f120da-a839-46ed-9d6b-c9e9deb894be" name="Default Changelist" comment="" />
+    <list default="true" id="34f120da-a839-46ed-9d6b-c9e9deb894be" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mbste/controller/AppoitementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mbste/controller/AppoitementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mbste/controller/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mbste/controller/NotificationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mbste/dao/NotificationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mbste/dao/NotificationDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mbste/model/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mbste/model/Notification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mbste/model/filters/NoficationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mbste/model/filters/NoficationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mbste/service/ApoitementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mbste/service/ApoitementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mbste/service/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mbste/service/NotificationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mbste/service/impl/AppoitementServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mbste/service/impl/AppoitementServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mbste/service/impl/NotificationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mbste/service/impl/NotificationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/AppoitementDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/AppoitementDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/NotificationDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/NotificationDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mbste/controller/AppoitementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mbste/controller/AppoitementController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mbste/service/ApoitementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mbste/service/ApoitementService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mbste/service/impl/AppoitementServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mbste/service/impl/AppoitementServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/AppoitementDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/AppoitementDao.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="wowe -new" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">

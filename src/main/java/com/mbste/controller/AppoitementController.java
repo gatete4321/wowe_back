@@ -28,7 +28,7 @@ public class AppoitementController {
     }
 
     @PostMapping(value = "/create", produces = "application/json;charset=UTF-8")
-    public String createAppoitement(@RequestBody AppoitementForm form) {
+    public Integer createAppoitement(@RequestBody AppoitementForm form) {
         return service.createAppoitement(form);
     }
 

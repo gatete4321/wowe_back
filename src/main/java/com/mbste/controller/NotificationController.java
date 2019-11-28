@@ -33,8 +33,4 @@ public class NotificationController {
         return service.deleteNotification(filter);
     }
 
-    @PostMapping(value = "/viewd", produces = "application/json;charset=UTF-8")
-    public Integer updateView(@RequestBody NoficationFilter filter) {
-        return service.updateView(filter);
-    }
 }

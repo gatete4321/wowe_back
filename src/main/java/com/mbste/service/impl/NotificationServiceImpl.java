@@ -31,8 +31,4 @@ public class NotificationServiceImpl implements NotificationService {
         return dao.deleteNotification(filter);
     }
 
-    @Override
-    public Integer updateView(NoficationFilter filter) {
-        return dao.updateviewd(filter);
-    }
 }
