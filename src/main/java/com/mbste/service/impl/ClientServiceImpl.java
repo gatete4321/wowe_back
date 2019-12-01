@@ -26,10 +26,11 @@ public class ClientServiceImpl implements ClientService
     }
 
     @Override
-    public Optional<Client> findById(Integer clientId) {
+    public Client findById(Integer clientId) {
         Client client=dao.findById(clientId);
         client.setPassword(null);
-        return Optional.of(client);
+//        return Optional.of(client);
+        return client;
     }
 
     @Override
@@ -75,6 +76,7 @@ public class ClientServiceImpl implements ClientService
     @Override
     public Optional<Client> findByUsername(String username) {
         Optional<Client> client=Optional.of(dao.findByUsername(username));
+//        Client client=dao.findByUsername(username);
         return client;
     }
 

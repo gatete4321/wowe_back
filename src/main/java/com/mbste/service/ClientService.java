@@ -14,7 +14,7 @@ public interface  ClientService
     public List<Client> getClientsList(ClientFilter clientFilter);
 
     //get single client(by id, phone, username, password, email)
-    public Optional<Client> findById(Integer clientId);
+    public Client findById(Integer clientId);
 
     //create a new client
     public String createNewClient(ClientForm clientForm);

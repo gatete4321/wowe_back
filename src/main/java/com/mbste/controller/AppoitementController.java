@@ -34,10 +34,7 @@ public class AppoitementController {
 
     @PostMapping(value = "/all", produces = "application/json;charset=UTF-8")
     public List<Appoitement> getAllAppoitementsOfClient(@RequestBody AppoitementFilter filter) {
-//        Map<String,Object> map=new HashMap<>();
         List<Appoitement> appoitements = service.getClientsAppoitements(filter);
-//        map.put("data",appoitements);
-//        return ReturnUtil.resultSuccess(map);
         return appoitements;
     }
 

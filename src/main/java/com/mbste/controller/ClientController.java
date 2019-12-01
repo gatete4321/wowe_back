@@ -26,13 +26,13 @@ public class ClientController {
     ClientDao dao;
 
     @PostMapping(value = "/info", produces = "application/json;charset=UTF-8")
-    public String getClient(@RequestBody ClientFilter form) {
-        Map<String, Object> resultMap = new HashMap<>();
-        Optional<Client> client = clientService.findById(form.getClientId());
-        resultMap.put("data", client);
+    public Client getClient(@RequestBody ClientFilter form) {
+//        Map<String, Object> resultMap = new HashMap<>();
+        Client client = clientService.findById(form.getClientId());
+//        resultMap.put("data", client);
 //        resultMap.put("completed",completed);
 //        resultMap.put("pending",pending);
-        return ReturnUtil.resultSuccess(resultMap);
+        return client;
     }
 
     @PostMapping(value = "/create", produces = "application/json;charset=UTF-8")

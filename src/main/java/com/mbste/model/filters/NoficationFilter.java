@@ -2,6 +2,7 @@ package com.mbste.model.filters;
 
 public class NoficationFilter
 {
+    private Integer id;
     private Integer clientId;
     private Integer notificationId;
 
@@ -17,6 +18,14 @@ public class NoficationFilter
 
     public void setClientId(Integer clientId) {
         this.clientId = clientId;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public Integer getNotificationId() {

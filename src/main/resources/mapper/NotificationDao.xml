@@ -2,6 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.mbste.dao.NotificationDao">
     <sql id="filter">
+        <if test="id!=null">
+            AND notification_id>#{id}
+        </if>
         <if test="clientId!=null">
             AND uyikorewe_id=#{clientId}
         </if>
@@ -31,8 +34,8 @@
 
 
     <insert id="createNotification" parameterType="map">
-        insert into notifications(notfication_id,appoitement_id,action_id,uwayikoze_id,uyikorewe_id,uwayikozeName)
-        values(#{notficationId},#{appoitementId},#{actionId},#{uwayikozeId},#{uyikoreweId},#{uwayikoze_name})
+        insert into notifications(appoitement_id,action_id,uwayikoze_id,uyikorewe_id,uwayikozeName)
+        values(#{appoitementId},#{actionId},#{uwayikozeId},#{uyikoreweId},#{uwayikoze_name})
     </insert>
 
 </mapper>
