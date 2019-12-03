@@ -93,4 +93,5 @@ public class Notification
     public void setUwayikozeName(String uwayikozeName) {
         this.uwayikozeName = uwayikozeName;
     }
+
 }

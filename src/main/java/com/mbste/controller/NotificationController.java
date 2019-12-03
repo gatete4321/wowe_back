@@ -25,6 +25,7 @@ public class NotificationController {
 
     @PostMapping(value = "/create", produces = "application/json;charset=UTF-8")
     public Integer createNotification(@RequestBody Notification notification) {
+
         return service.createNotification(notification);
     }
 

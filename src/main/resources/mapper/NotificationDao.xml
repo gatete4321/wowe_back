@@ -34,8 +34,8 @@
 
 
     <insert id="createNotification" parameterType="map">
-        insert into notifications(appoitement_id,action_id,uwayikoze_id,uyikorewe_id,uwayikozeName)
-        values(#{appoitementId},#{actionId},#{uwayikozeId},#{uyikoreweId},#{uwayikoze_name})
+        insert into notifications(appoitement_id,action_id,uwayikoze_id,uyikorewe_id,uwayikoze_name)
+        values(#{appoitementId},#{actionId},#{uwayikozeId},#{uyikoreweId},#{uwayikozeName})
     </insert>
 
 </mapper>
