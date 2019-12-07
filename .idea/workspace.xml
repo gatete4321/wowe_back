@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="34f120da-a839-46ed-9d6b-c9e9deb894be" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/AppoitementDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/AppoitementDao.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
