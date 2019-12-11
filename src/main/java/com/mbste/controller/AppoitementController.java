@@ -41,7 +41,11 @@ public class AppoitementController {
     @PostMapping(value = "/delete", produces = "application/json;charset=UTF-8")
     public String deleteAppoitement(@RequestBody AppoitementFilter filter) {
 
-        return service.deleteAppoitement(filter);
+
+        if (filter.getAppoitementId()!=null){
+            return service.deleteAppoitement(filter);
+        }
+        return "appoitement does not exist";
     }
 
     @RequestMapping("/heroku")

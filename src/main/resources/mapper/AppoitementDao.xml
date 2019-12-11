@@ -13,7 +13,7 @@
 
     <sql id="filter">
     <if test="id!=null">
-        AND appoitement_id>#{id}
+        AND appoitement_id>#{appoitementId}
     </if>
     <if test="clientId!=null">
         AND client_id=#{clientId}
@@ -69,8 +69,8 @@
     </select>
 
     <update id="delete" parameterType="map">
-        update appoitements set status==99 where 1
-        <include refid="filter"/>
+        update appoitements set status=99 where 1 and status!=99
+        AND appoitement_id=#{appoitementId}
     </update>
     <select id="lastAppId" parameterType="map" resultType="java.lang.Integer">
         select appoitement_id from appoitements where client_id=#{clientId} and

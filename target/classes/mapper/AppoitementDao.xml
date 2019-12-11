@@ -13,7 +13,7 @@
 
     <sql id="filter">
     <if test="id!=null">
-        AND appoitement_id>#{id}
+        AND appoitement_id>#{appoitementId}
     </if>
     <if test="clientId!=null">
         AND client_id=#{clientId}
@@ -53,15 +53,15 @@
         (#{clientId},#{techId},#{doneTime},#{description},#{serviceId},#{techName})
     </insert>
     <update id="updateAppoitement" parameterType="map">
-        update appointments set description=#{description} where client_id=#{clientId} and id=#{appoitementId}
+        update appointments set description=#{description} where client_id=#{clientId} and appoitement_id=#{appoitementId}
         AND status!=99 AND status!=0
     </update>
     <update id="makeFeedback" parameterType="map">
-        update appointments set feedback=#{feedback} where client_id=#{clientId} and id=#{appoitementId}
+        update appointments set feedback=#{feedback} where client_id=#{clientId} and appoitement_id=#{appoitementId}
         AND status!=1 and status!=99
     </update>
     <update id="rate" parameterType="map">
-        update appoitements set rate=#{rate} where client_id=#{clientId} and id=#{appoitementId}
+        update appoitements set rate=#{rate} where client_id=#{clientId} and appoitement_id=#{appoitementId}
         AND status!=1 AND status!=99
     </update>
     <select id="getRates" parameterType="map" resultType="java.lang.Integer">
@@ -69,7 +69,10 @@
     </select>
 
     <update id="delete" parameterType="map">
-        update appoitements set status==99 where 1
-        <include refid="filter"/>
+        update appoitements set status=99 where 1 and status!=99
+        AND appoitement_id=#{appoitementId}
     </update>
+    <select id="lastAppId" parameterType="map" resultType="java.lang.Integer">
+        select appoitement_id from appoitements where client_id=#{clientId} and
+    </select>
 </mapper>
