@@ -44,8 +44,8 @@
         <include refid="filter"/>
     </select>
     <select id="findByClientId" parameterType="map" resultType="com.mbste.model.Appoitement">
-        SELECT * FROM appoitements where 1
-        <include refid="filter"/>
+        SELECT * FROM appoitements where client_id=#{clientId} and status!=99
+<!--        <include refid="filter"/>-->
     </select>
     <insert id="createAppoitement" parameterType="map">
         INSERT INTO appoitements(client_id,tech_id,done_time,description,service_id,tech_name)

@@ -1,60 +1,43 @@
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\controller\NewsController.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\controller\ClientController.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\commons\security\config\TokenAuthenticationProvider.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\commons\security\config\TokenAuthenticationFilter.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\Main.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\service\impl\BlogServiceImpl.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\dao\NewsFeedDao.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\model\Client.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\dao\PicturesDao.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\commons\security\dates\DateService.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\filters\MachineFilter.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\model\filters\AppoitementFilter.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\service\impl\PictureServiceImpl.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\model\NewsFeed.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\service\BlogService.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\testing\Testing.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\model\Pictures.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\service\impl\ClientServiceImpl.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\commons\security\dates\JodaDateService.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\model\filters\LoginForm.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\commons\utils\ReturnUtil.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\dao\BlogDao.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\ExceptionH\NotFoundException.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\model\Location.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\dao\ClientDao.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\model\filters\BlogsFilter.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\controller\BlogController.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\commons\security\dates\DateServiceConfig.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\dao\AppoitementDao.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\model\filters\NewsFeedForm.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\commons\security\TokenService.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\commons\security\config\SecurityConfig.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\service\ApoitementService.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\service\impl\NewsServiceImpl.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\model\filters\PictureForm.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\commons\utils\BSysConstants.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\model\filters\ClientForm.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\service\PictureService.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\ExceptionH\NotFoundExceptionHandler.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\ExceptionH\ErrorResponse.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\commons\security\ClientAuthenticationService.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\model\filters\SearchForm.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\model\Appoitement.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\controller\Heroku.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\service\impl\AppoitementServiceImpl.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\model\Companies.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\model\filters\PictureFilter.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\model\ClientFilter.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\controller\PictureController.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\model\filters\AppoitementForm.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\commons\security\config\NoRedirectStrategy.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\commons\security\jwt\JWTTokenService.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\controller\PublicController.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\commons\security\jwt\TokenAuthenticationService.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\controller\AppoitementController.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\model\filters\BlogsForm.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\model\Blog.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\service\NewsService.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\model\filters\NewsFeedFilter.java
-C:\Users\Oops\Documents\wowe\src\main\java\com\mbste\service\ClientService.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\controller\PictureController.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\ExceptionH\NotFoundException.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\commons\security\dates\DateService.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\commons\utils\BSysConstants.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\commons\security\jwt\JWTTokenService.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\model\Client.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\commons\security\config\TokenAuthenticationFilter.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\model\Appoitement.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\service\impl\NotificationServiceImpl.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\service\ApoitementService.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\commons\security\TokenService.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\dao\NotificationDao.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\commons\security\dates\DateServiceConfig.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\controller\ClientController.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\controller\Heroku.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\dao\AppoitementDao.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\commons\security\dates\JodaDateService.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\commons\security\jwt\TokenAuthenticationService.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\controller\AppoitementController.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\service\NotificationService.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\commons\security\config\SecurityConfig.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\commons\security\config\TokenAuthenticationProvider.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\filters\MachineFilter.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\service\impl\ClientServiceImpl.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\controller\NotificationController.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\ExceptionH\NotFoundExceptionHandler.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\model\filters\AppoitementFilter.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\model\filters\NoficationFilter.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\model\Notification.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\Main.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\model\filters\SearchForm.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\ExceptionH\ErrorResponse.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\model\ClientFilter.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\model\filters\AppoitementForm.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\commons\security\config\NoRedirectStrategy.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\dao\ClientDao.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\service\ClientService.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\commons\utils\ReturnUtil.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\model\filters\LoginForm.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\service\impl\AppoitementServiceImpl.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\commons\security\ClientAuthenticationService.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\controller\PublicController.java
+C:\Users\Egene\Desktop\woowe\wowe -new\src\main\java\com\mbste\model\filters\ClientForm.java

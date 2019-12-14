@@ -17,7 +17,7 @@ public interface  ClientService
     public Client findById(Integer clientId);
 
     //create a new client
-    public String createNewClient(ClientForm clientForm);
+    public Integer createNewClient(ClientForm clientForm);
 
     //update client information
     public Integer updateClient(ClientForm clientForm);

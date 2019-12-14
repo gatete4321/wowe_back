@@ -1,0 +1,8 @@
+applications:
+- name: wowe3
+  disk_quota: 1G
+  instances: 1
+  memory: 1G
+  routes:
+  - route: wowe3.cfapps.io
+  stack: cflinuxfs3

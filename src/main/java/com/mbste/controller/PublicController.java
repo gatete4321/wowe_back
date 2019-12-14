@@ -28,7 +28,7 @@ public class PublicController {
     @Autowired
     ClientService clientService;
     @PostMapping(value = "/register",produces = "application/json;charset=UTF-8")
-    String register(@RequestBody ClientForm clientForm){
+    Integer register(@RequestBody ClientForm clientForm){
         return clientService.createNewClient(clientForm);
     }
 //

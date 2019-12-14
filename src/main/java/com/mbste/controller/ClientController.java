@@ -36,7 +36,7 @@ public class ClientController {
     }
 
     @PostMapping(value = "/create", produces = "application/json;charset=UTF-8")
-    public String createClient(@RequestBody ClientForm clientForm) {
+    public Integer createClient(@RequestBody ClientForm clientForm) {
         return clientService.createNewClient(clientForm);
     }
 

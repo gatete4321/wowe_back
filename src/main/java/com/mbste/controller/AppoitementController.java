@@ -50,7 +50,7 @@ public class AppoitementController {
 
     @RequestMapping("/heroku")
     public String hello() {
-        return "vip man";
+        return "vip man gahambec";
     }
 
 

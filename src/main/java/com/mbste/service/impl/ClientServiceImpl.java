@@ -34,7 +34,7 @@ public class ClientServiceImpl implements ClientService
     }
 
     @Override
-    public String createNewClient(ClientForm clientForm) {
+    public Integer createNewClient(ClientForm clientForm) {
         //track insert results
         int result=0;
 
@@ -42,13 +42,15 @@ public class ClientServiceImpl implements ClientService
             result = dao.createClient(clientForm);
         }
         else{
-            return "the username has been taken";
+            return 100;
 //            throw new NotFoundException("the username has taken");//ndahindura aho guta exception ngarure string
         }
         if(result>0 ){
-            return ReturnUtil.resultSuccess();
+//            return ReturnUtil.resultSuccess();
+            return 1;
         }else {
-            return ReturnUtil.resultFail("Database insertion failure");
+//            return ReturnUtil.resultFail("Database insertion failure");
+            return 0;
             //throw new NotFoundException("the name was taken ");
         }
     }
