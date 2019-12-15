@@ -20,7 +20,7 @@ import static org.apache.commons.lang3.StringUtils.removeStart;
 
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 /**
- * Created by Nostalgie Patrice
+ * Created by gatete rugamba
  * on 10/30/2018
  * Make it work, make it right, make it fast.
  */

@@ -18,7 +18,7 @@ import java.util.Map;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("public/client")
+@RequestMapping("/clients")
 public class ClientController {
     @Autowired
     ClientService clientService;

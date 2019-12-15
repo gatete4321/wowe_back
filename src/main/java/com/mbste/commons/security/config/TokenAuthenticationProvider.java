@@ -37,7 +37,7 @@ public class TokenAuthenticationProvider extends
     protected UserDetails retrieveUser(String s, UsernamePasswordAuthenticationToken
             authentication) throws AuthenticationException {
         final Object token = authentication.getCredentials();
-        return (UserDetails) Optional
+        return Optional
                 .ofNullable(token)
                 .map(String::valueOf)
                 .flatMap(auth::findByToken)

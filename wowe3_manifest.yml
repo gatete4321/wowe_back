@@ -3,6 +3,11 @@ applications:
   disk_quota: 1G
   instances: 1
   memory: 1G
+  path: target/mbste.jar
   routes:
   - route: wowe3.cfapps.io
+  services:
+  - mysqldb
   stack: cflinuxfs3
+  buildpacks:
+  - https://github.com/cloudfoundry/java-buildpack.git

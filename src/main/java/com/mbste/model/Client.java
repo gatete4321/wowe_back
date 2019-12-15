@@ -1,8 +1,12 @@
 package com.mbste.model;
 
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.util.Collection;
 import java.util.Date;
 
-public class Client {
+public class Client implements UserDetails {
     private Integer clientId;
 
     //user phone number
@@ -30,7 +34,7 @@ public class Client {
     private Integer serviceId;
 
 
-    private String token;
+//    private String token;
 
 
     private Integer rates;
@@ -64,14 +68,14 @@ public class Client {
     public void setClientLocation(String clientLocation) {
         this.clientLocation = clientLocation;
     }
-
-    public String getToken() {
-        return token;
-    }
-
-    public void setToken(String token) {
-        this.token = token;
-    }
+//
+//    public String getToken() {
+//        return token;
+//    }
+//
+//    public void setToken(String token) {
+//        this.token = token;
+//    }
 
     public Integer getServiceId() {
         return serviceId;
@@ -145,5 +149,29 @@ public class Client {
 
     public void setStatus(Integer status) {
         this.status = status;
+    }
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
+    }
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return null;
     }
 }

@@ -15,7 +15,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/public/app")
+@RequestMapping("/app")
 public class AppoitementController {
     @Autowired
     AppoitementDao dao;

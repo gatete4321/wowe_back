@@ -38,8 +38,8 @@ public class PublicController {
 //        return login(username, password);
 //    }
     @PostMapping(value = "/login",produces = "application/json;charset=UTF-8")
-    Client login(@RequestBody LoginForm loginForm) {
-//        Map<String, Object> resultMap = new HashMap<>();
+    String login(@RequestBody LoginForm loginForm) {
+        Map<String, Object> resultMap = new HashMap<>();
 
         Optional<String> token = authentication.login(loginForm.getUsername(), loginForm.getPassword());
         // System.err.println("@@@@@@@@$#$#@"+token.toString());
@@ -47,16 +47,16 @@ public class PublicController {
         Client client2=null;
         if (token.isPresent()) {
             client = clientService.findByUsername(loginForm.getUsername());
-            client2=client.get();
+//            client2=client.get();
 
-            client2.setToken(token.get());
-//            resultMap.put("token", token);
-//            resultMap.put("user", client);
+//            client2.setToken(token.get());
+            resultMap.put("token", token);
+            resultMap.put("user", client);
 //        return authentication.login(username, password)
 //                .orElseThrow(() -> new RuntimeException("invalid login and/or password"));
 
-//            return ReturnUtil.resultSuccess(resultMap);
-            return client2;
+            return ReturnUtil.resultSuccess(resultMap);
+//            return client2;
         }
         throw new NotFoundException("invalid username or password");
     }
