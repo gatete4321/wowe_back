@@ -55,7 +55,7 @@
     </sql>
 
 
-    <select id="getAll" parameterType="map" resultType="com.mbste.model.Client">
+    <select id="getAll" parameterType="map" resultType="com.mbste.model.Cnt">
         SELECT * FROM clients WHERE 1
         <include refid="client_filter"/>
         AND status!=99

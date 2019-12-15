@@ -1,12 +1,12 @@
 package com.mbste.model;
 
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
-
-import java.util.Collection;
 import java.util.Date;
 
-public class Client implements UserDetails {
+/**
+ * is for repracing the client.class
+ * becz client has more fields
+ */
+public class Cnt {
     private Integer clientId;
 
     //user phone number
@@ -34,7 +34,7 @@ public class Client implements UserDetails {
     private Integer serviceId;
 
 
-    private String token;
+//    private String token;
 
 
     private Integer rates;
@@ -44,47 +44,6 @@ public class Client implements UserDetails {
 
     private String clientLocation;
 
-
-    public Integer getRates() {
-        return rates;
-    }
-
-    public void setRates(Integer rates) {
-        this.rates = rates;
-    }
-
-    public String getClientAbout() {
-        return clientAbout;
-    }
-
-    public void setClientAbout(String clientAbout) {
-        this.clientAbout = clientAbout;
-    }
-
-    public String getClientLocation() {
-        return clientLocation;
-    }
-
-    public void setClientLocation(String clientLocation) {
-        this.clientLocation = clientLocation;
-    }
-
-    public String getToken() {
-        return token;
-    }
-
-    public void setToken(String token) {
-        this.token = token;
-    }
-
-    public Integer getServiceId() {
-        return serviceId;
-    }
-
-    public void setServiceId(Integer serviceId) {
-        this.serviceId = serviceId;
-    }
-
     public Integer getClientId() {
         return clientId;
     }
@@ -92,7 +51,6 @@ public class Client implements UserDetails {
     public void setClientId(Integer clientId) {
         this.clientId = clientId;
     }
-
 
     public String getPhoneNumber() {
         return phoneNumber;
@@ -109,7 +67,6 @@ public class Client implements UserDetails {
     public void setUsername(String username) {
         this.username = username;
     }
-
 
     public String getPassword() {
         return password;
@@ -150,28 +107,37 @@ public class Client implements UserDetails {
     public void setStatus(Integer status) {
         this.status = status;
     }
-    @Override
-    public boolean isAccountNonExpired() {
-        return true;
+
+    public Integer getServiceId() {
+        return serviceId;
     }
 
-    @Override
-    public boolean isAccountNonLocked() {
-        return true;
+    public void setServiceId(Integer serviceId) {
+        this.serviceId = serviceId;
     }
 
-    @Override
-    public boolean isCredentialsNonExpired() {
-        return true;
+
+    public Integer getRates() {
+        return rates;
     }
 
-    @Override
-    public boolean isEnabled() {
-        return true;
+    public void setRates(Integer rates) {
+        this.rates = rates;
     }
 
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+    public String getClientAbout() {
+        return clientAbout;
+    }
+
+    public void setClientAbout(String clientAbout) {
+        this.clientAbout = clientAbout;
+    }
+
+    public String getClientLocation() {
+        return clientLocation;
+    }
+
+    public void setClientLocation(String clientLocation) {
+        this.clientLocation = clientLocation;
     }
 }

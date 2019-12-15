@@ -15,7 +15,7 @@ import java.io.*;
 
 
 @RestController
-@RequestMapping("/public/pic")
+@RequestMapping("/pic")
 public class PictureController {
 
     @Autowired

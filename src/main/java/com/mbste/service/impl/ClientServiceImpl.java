@@ -4,6 +4,7 @@ import com.mbste.ExceptionH.NotFoundException;
 import com.mbste.dao.ClientDao;
 import com.mbste.model.Client;
 import com.mbste.model.ClientFilter;
+import com.mbste.model.Cnt;
 import com.mbste.model.filters.ClientForm;
 import com.mbste.service.ClientService;
 import com.mbste.commons.utils.ReturnUtil;
@@ -19,7 +20,7 @@ public class ClientServiceImpl implements ClientService
     ClientDao dao;
 
     @Override
-    public List<Client> getClientsList(ClientFilter clientFilter) {
+    public List<Cnt> getClientsList(ClientFilter clientFilter) {
         clientFilter.setPaginationDates();
         clientFilter.setPaginationOffset();
         return dao.getAll(clientFilter);
@@ -107,8 +108,8 @@ public class ClientServiceImpl implements ClientService
     }
 
     @Override
-    public List<Client> getAll(ClientFilter filter) {
-        List<Client> clients=dao.getAll(filter);
+    public List<Cnt> getAll(ClientFilter filter) {
+        List<Cnt> clients=dao.getAll(filter);
         clients.forEach((client -> {
             client.setPassword(null);
         }));

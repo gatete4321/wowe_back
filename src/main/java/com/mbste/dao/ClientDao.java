@@ -2,6 +2,7 @@ package com.mbste.dao;
 
 import com.mbste.model.Client;
 import com.mbste.model.ClientFilter;
+import com.mbste.model.Cnt;
 import com.mbste.model.filters.ClientForm;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Component;
@@ -17,7 +18,7 @@ import java.util.List;
 public interface ClientDao {
 
     //query clients
-    public List<Client> getAll(ClientFilter clientFilter);
+    public List<Cnt> getAll(ClientFilter clientFilter);
 
     //get single client
     public Client findById(Integer clientId);

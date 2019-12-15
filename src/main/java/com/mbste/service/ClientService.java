@@ -2,6 +2,7 @@ package com.mbste.service;
 
 import com.mbste.model.Client;
 import com.mbste.model.ClientFilter;
+import com.mbste.model.Cnt;
 import com.mbste.model.filters.ClientForm;
 
 import java.util.List;
@@ -11,7 +12,7 @@ public interface  ClientService
 {
 
     //get the list of all client(support pagination)
-    public List<Client> getClientsList(ClientFilter clientFilter);
+    public List<Cnt> getClientsList(ClientFilter clientFilter);
 
     //get single client(by id, phone, username, password, email)
     public Client findById(Integer clientId);
@@ -33,7 +34,7 @@ public interface  ClientService
     //for changing profile image
     public String changeProfileImage(ClientForm clientForm);
 
-    public List<Client> getAll(ClientFilter filter);
+    public List<Cnt> getAll(ClientFilter filter);
 
 //    Integer getPassword(ClientFilter filter);
 }

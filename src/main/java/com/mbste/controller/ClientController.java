@@ -3,6 +3,7 @@ package com.mbste.controller;
 import com.mbste.dao.ClientDao;
 import com.mbste.model.Client;
 import com.mbste.model.ClientFilter;
+import com.mbste.model.Cnt;
 import com.mbste.model.filters.ClientForm;
 import com.mbste.service.ClientService;
 import com.mbste.commons.utils.ReturnUtil;
@@ -61,7 +62,7 @@ public class ClientController {
      * @return
      */
     @PostMapping(value = "/all", produces = "application/json;charset=UTF-8")
-    public List<Client> getAll(@RequestBody ClientFilter filter) {
+    public List<Cnt> getAll(@RequestBody ClientFilter filter) {
 
         return clientService.getAll(filter);
     }
