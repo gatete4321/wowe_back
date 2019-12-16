@@ -16,6 +16,11 @@ public class NotificationServiceImpl implements NotificationService {
     private NotificationDao dao;
 
 
+    /**
+     * TODO ngomba kuzana na description za appoitement
+     * @param filter
+     * @return
+     */
     @Override
     public List<Notification> getNotifications(NoficationFilter filter) {
         return dao.getNotification(filter);
@@ -29,6 +34,11 @@ public class NotificationServiceImpl implements NotificationService {
     @Override
     public Integer deleteNotification(NoficationFilter filter) {
         return dao.deleteNotification(filter);
+    }
+
+    @Override
+    public int createTable() {
+        return dao.createTable();
     }
 
 }

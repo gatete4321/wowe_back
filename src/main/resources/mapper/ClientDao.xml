@@ -106,4 +106,21 @@
         SELECT password FROM clients WHERE client_id=#{clientId} AND status!=99
     </select>
 
+    <update id="createTable">
+        CREATE TABLE clients (
+        client_id int(15) NOT NULL,
+        service_id int(3) DEFAULT NULL,
+        username varchar(12) NOT NULL,
+        client_about varchar(12) DEFAULT NULL,
+        password varchar(15) NOT NULL,
+        email varchar(15) NOT NULL,
+        profile_image varchar(15) DEFAULT NULL,
+        phone_number varchar(12) NOT NULL,
+        status int(3) NOT NULL DEFAULT 1,
+        client_location varchar(15) DEFAULT NULL,
+        create_time timestamp NOT NULL DEFAULT current_timestamp(),
+        rates int(3) DEFAULT NULL
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+    </update>
+
 </mapper>

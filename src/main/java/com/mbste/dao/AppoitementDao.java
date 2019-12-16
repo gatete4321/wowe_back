@@ -31,4 +31,8 @@ public interface AppoitementDao
     List<Integer> getRates(Integer techId);
 
     int delete(AppoitementFilter filter);
+
+    int createAppTable();
+
+    int lastInsertedRow(Integer clientId,Integer techId);
 }

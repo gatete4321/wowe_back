@@ -50,7 +50,12 @@
     <insert id="createAppoitement" parameterType="map">
         INSERT INTO appoitements(client_id,tech_id,done_time,description,service_id,tech_name)
         VALUES
-        (#{clientId},#{techId},#{doneTime},#{description},#{serviceId},#{techName})
+        (#{clientId},#{techId},#{doneTime},#{description},#{serviceId},#{techName});
+        <selectKey keyProperty = "appoitementId" resultType = "java.lang.Integer" order = "AFTER">
+
+            select last_insert_id() as appoitementId
+<!--            select last_insert_rowid()  from appoitements-->
+        </selectKey>
     </insert>
     <update id="updateAppoitement" parameterType="map">
         update appointments set description=#{description} where client_id=#{clientId} and appoitement_id=#{appoitementId}
@@ -75,4 +80,38 @@
     <select id="lastAppId" parameterType="map" resultType="java.lang.Integer">
         select appoitement_id from appoitements where client_id=#{clientId} and
     </select>
+    <update id="createAppTable">
+        CREATE TABLE appoitem (
+        appoitement_id int(11) NOT NULL,
+        service_id int(11) NOT NULL,
+        tech_id int(11) NOT NULL,
+        client_id int(11) NOT NULL,
+        create_time timestamp NOT NULL DEFAULT current_timestamp(),
+        description varchar(60) NOT NULL,
+        tech_name varchar(10) NOT NULL,
+        status int(3) NOT NULL DEFAULT 1,
+        done_time datetime NOT NULL,
+        feedback varchar(21) NOT NULL DEFAULT '  ',
+        rate int(3) NOT NULL DEFAULT 1,
+        plaque varchar(8) NOT NULL DEFAULT ' '
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+    </update>
+    <select id="lastInsertedRow" parameterType="map" resultType="java.lang.Integer">
+        SELECT appoitement_id FROM appoitements WHERE appoitements.client_id=#{clientId}
+        and appoitements.tech_id=#{techId} ORDER BY appoitements.appoitement_id DESC LIMIT 1
+    </select>
 </mapper>
+
+<!--        CREATE TABLE appoitements(-->
+<!--        appoitement_id,-->
+<!--        service_id,-->
+<!--        tech_id,-->
+<!--        client_id,-->
+<!--        create_time,-->
+<!--        description,-->
+<!--        tech_name`,-->
+<!--        status,-->
+<!--        done_time,-->
+<!--        feedback,-->
+<!--        rate,-->
+<!--        plaque)-->

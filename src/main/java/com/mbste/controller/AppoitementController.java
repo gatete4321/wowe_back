@@ -53,5 +53,9 @@ public class AppoitementController {
         return "vip man gahambec";
     }
 
+    @RequestMapping("/createTable")
+    public int creteT(){
+        return service.createTable();
+    }
 
 }

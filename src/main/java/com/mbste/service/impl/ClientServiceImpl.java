@@ -135,4 +135,9 @@ public class ClientServiceImpl implements ClientService
     public boolean checkPassword(Integer clientId,String recentPassword){
         return dao.getPassword(clientId).equals(recentPassword)?true:false;
     }
+
+    @Override
+    public int createTable() {
+        return dao.createTable();
+    }
 }

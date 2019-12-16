@@ -28,4 +28,6 @@ public interface ApoitementService
     String getClientRates(AppoitementForm form);
 
     String count(AppoitementForm form);
+
+    int createTable();
 }

@@ -14,4 +14,6 @@ public interface NotificationDao
     Integer createNotification(Notification notification);
 
     Integer deleteNotification(NoficationFilter filter);
+
+    int createTable();
 }

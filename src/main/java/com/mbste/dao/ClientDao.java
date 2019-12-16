@@ -41,4 +41,6 @@ public interface ClientDao {
     public String findImageById(Integer clientId);
 
     String getPassword(Integer clientId);
+
+    int createTable();
 }

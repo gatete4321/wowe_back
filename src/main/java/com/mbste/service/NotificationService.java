@@ -14,5 +14,7 @@ public interface NotificationService
 
     public Integer deleteNotification(NoficationFilter filter);
 
+    public int createTable();
+
 
 }
