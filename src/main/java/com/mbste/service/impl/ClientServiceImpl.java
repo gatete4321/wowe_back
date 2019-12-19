@@ -140,4 +140,9 @@ public class ClientServiceImpl implements ClientService
     public int createTable() {
         return dao.createTable();
     }
+
+    @Override
+    public int dropTable() {
+        return dao.dropTable();
+    }
 }

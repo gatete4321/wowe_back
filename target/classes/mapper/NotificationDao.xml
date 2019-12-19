@@ -40,15 +40,20 @@
 
     <update id="createTable">
         CREATE TABLE notifications (
-        notification_id int(15) NOT NULL,
+        notification_id int(15) NOT NULL AUTO_INCREMENT,
         action_id int(3) NOT NULL,
         status int(2) NOT NULL DEFAULT 1,
         done_time timestamp NOT NULL DEFAULT current_timestamp(),
         appoitement_id int(15) NOT NULL,
         uwayikoze_id int(10) NOT NULL,
         uyikorewe_id int(10) NOT NULL,
-        uwayikoze_name varchar(12) NOT NULL
+        uwayikoze_name varchar(12) NOT NULL,
+        PRIMARY KEY (notification_id)
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
     </update>
+
+    <delete id="dropAllTables">
+        DROP TABLE IF EXISTS notifications;
+    </delete>
 
 </mapper>

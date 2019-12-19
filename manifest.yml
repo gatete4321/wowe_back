@@ -3,8 +3,15 @@ applications:
   disk_quota: 1G
   instances: 1
   memory: 1G
+  path: target/mbste.jar
   routes:
   - route: wowe3.cfapps.io
   services:
   - wowe
   stack: cflinuxfs3
+
+
+#buildpack: https://github.com/cloudfoundry/java-buildpack.git
+
+env:
+  JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{enabled: false}'

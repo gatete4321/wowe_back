@@ -16,4 +16,6 @@ public interface NotificationDao
     Integer deleteNotification(NoficationFilter filter);
 
     int createTable();
+
+    int dropAllTables();
 }

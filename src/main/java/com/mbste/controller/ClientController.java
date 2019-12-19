@@ -74,8 +74,8 @@ public class ClientController {
         }
         return "false";
     }
-    @RequestMapping("createTable")
-    public int createTable(){
-        return clientService.createTable();
-    }
+//    @RequestMapping("createTable")
+//    public int createTable(){
+//        return clientService.createTable();
+//    }
 }

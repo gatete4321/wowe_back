@@ -35,4 +35,5 @@ public interface AppoitementDao
     int createAppTable();
 
     int lastInsertedRow(Integer clientId,Integer techId);
+    int dropTable();
 }

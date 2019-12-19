@@ -81,8 +81,8 @@
         select appoitement_id from appoitements where client_id=#{clientId} and
     </select>
     <update id="createAppTable">
-        CREATE TABLE appoitem (
-        appoitement_id int(11) NOT NULL,
+        CREATE TABLE appoitements (
+        appoitement_id int NOT NULL AUTO_INCREMENT,
         service_id int(11) NOT NULL,
         tech_id int(11) NOT NULL,
         client_id int(11) NOT NULL,
@@ -93,13 +93,18 @@
         done_time datetime NOT NULL,
         feedback varchar(21) NOT NULL DEFAULT '  ',
         rate int(3) NOT NULL DEFAULT 1,
-        plaque varchar(8) NOT NULL DEFAULT ' '
+        plaque varchar(8) NOT NULL DEFAULT ' ',
+        PRIMARY KEY (appoitement_id)
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
     </update>
     <select id="lastInsertedRow" parameterType="map" resultType="java.lang.Integer">
         SELECT appoitement_id FROM appoitements WHERE appoitements.client_id=#{clientId}
         and appoitements.tech_id=#{techId} ORDER BY appoitements.appoitement_id DESC LIMIT 1
     </select>
+
+    <delete id="dropTable">
+        DROP TABLE IF EXISTS appoitements;
+    </delete>
 </mapper>
 
 <!--        CREATE TABLE appoitements(-->

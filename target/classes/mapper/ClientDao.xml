@@ -86,7 +86,8 @@
         VALUES (#{phoneNumber},#{username},#{password},#{email}, #{profileImage},#{createTime})
     </insert>
     <update id="updateClient" parameterType="map">
-        UPDATE clients SET <include refid="update_filter"/>
+        UPDATE clients SET
+        <include refid="update_filter"/>
         WHERE client_id=#{clientId} and status!=99
     </update>
     <select id="count" resultType="int">
@@ -108,7 +109,7 @@
 
     <update id="createTable">
         CREATE TABLE clients (
-        client_id int(15) NOT NULL,
+        client_id int(15) NOT NULL AUTO_INCREMENT,
         service_id int(3) DEFAULT NULL,
         username varchar(12) NOT NULL,
         client_about varchar(12) DEFAULT NULL,
@@ -119,8 +120,11 @@
         status int(3) NOT NULL DEFAULT 1,
         client_location varchar(15) DEFAULT NULL,
         create_time timestamp NOT NULL DEFAULT current_timestamp(),
-        rates int(3) DEFAULT NULL
+        rates int(3) DEFAULT NULL,
+        PRIMARY KEY (client_id)
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
     </update>
-
+    <delete id="dropTable">
+        DROP TABLE IF EXISTS clients;
+    </delete>
 </mapper>

@@ -41,4 +41,8 @@ public class NotificationServiceImpl implements NotificationService {
         return dao.createTable();
     }
 
+    @Override
+    public int dropTable() {
+        return dao.dropAllTables();
+    }
 }

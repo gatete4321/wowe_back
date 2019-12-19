@@ -43,4 +43,6 @@ public interface ClientDao {
     String getPassword(Integer clientId);
 
     int createTable();
+
+    int dropTable();
 }

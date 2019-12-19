@@ -33,9 +33,9 @@ public class NotificationController {
     public Integer deleteNotification(@RequestBody NoficationFilter filter) {
         return service.deleteNotification(filter);
     }
-    @RequestMapping("/createTable")
-    Integer createTable(){
-        return service.createTable();
-    }
+//    @RequestMapping("/createTable")
+//    Integer createTable(){
+//        return service.createTable();
+//    }
 
 }

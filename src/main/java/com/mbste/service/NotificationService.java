@@ -16,5 +16,7 @@ public interface NotificationService
 
     public int createTable();
 
+    int dropTable();
+
 
 }

@@ -30,4 +30,6 @@ public interface ApoitementService
     String count(AppoitementForm form);
 
     int createTable();
+
+    int dropTable();
 }

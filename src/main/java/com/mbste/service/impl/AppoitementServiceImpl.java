@@ -145,4 +145,9 @@ public class AppoitementServiceImpl implements ApoitementService {
         return notificationService.createNotification(notification);
 
     }
+
+    @Override
+    public int dropTable() {
+        return dao.dropTable();
+    }
 }

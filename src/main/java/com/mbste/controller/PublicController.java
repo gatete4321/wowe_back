@@ -6,7 +6,9 @@ import com.mbste.commons.utils.ReturnUtil;
 import com.mbste.model.Client;
 import com.mbste.model.filters.ClientForm;
 import com.mbste.model.filters.LoginForm;
+import com.mbste.service.ApoitementService;
 import com.mbste.service.ClientService;
+import com.mbste.service.NotificationService;
 import lombok.NonNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,7 +21,7 @@ import java.util.Map;
 import java.util.Optional;
 
 @RestController
-@RequestMapping(value = "/public/client")
+@RequestMapping(value = "/public/twese")
 public class PublicController {
     @NonNull
     @Autowired
@@ -31,6 +33,13 @@ public class PublicController {
     Integer register(@RequestBody ClientForm clientForm){
         return clientService.createNewClient(clientForm);
     }
+
+    @Autowired
+    ApoitementService apoitementService;
+
+    @Autowired
+    private NotificationService notificationService;
+
 //
 //    String register(@RequestParam("username") final String username,
 //                    @RequestParam("password") final String password) {
@@ -79,6 +88,14 @@ public class PublicController {
 
             return ReturnUtil.resultSuccess(resultMap);
 
+    }
+
+    @RequestMapping("/createTable")
+    public int creteT(){
+        notificationService.dropTable();
+        apoitementService.dropTable();
+        clientService.dropTable();
+        return apoitementService.createTable()|notificationService.createTable()|clientService.createTable();
     }
 
 }

@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="34f120da-a839-46ed-9d6b-c9e9deb894be" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manifest.yml" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mbste/controller/AppoitementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mbste/controller/AppoitementController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mbste/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mbste/controller/ClientController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mbste/controller/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mbste/controller/NotificationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mbste/controller/PublicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mbste/controller/PublicController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mbste/dao/AppoitementDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mbste/dao/AppoitementDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mbste/dao/ClientDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mbste/dao/ClientDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mbste/dao/NotificationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mbste/dao/NotificationDao.java" afterDir="false" />
@@ -15,16 +17,28 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mbste/service/impl/AppoitementServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mbste/service/impl/AppoitementServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mbste/service/impl/ClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mbste/service/impl/ClientServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mbste/service/impl/NotificationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mbste/service/impl/NotificationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/AppoitementDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/AppoitementDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ClientDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ClientDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/NotificationDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/NotificationDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mbste/controller/AppoitementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mbste/controller/AppoitementController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mbste/controller/PictureController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mbste/controller/PictureController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mbste/controller/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mbste/controller/ClientController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mbste/controller/NotificationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mbste/controller/NotificationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mbste/controller/PublicController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mbste/controller/PublicController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mbste/dao/AppoitementDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mbste/dao/AppoitementDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mbste/dao/ClientDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mbste/dao/ClientDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mbste/dao/NotificationDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mbste/dao/NotificationDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mbste/service/ApoitementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mbste/service/ApoitementService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mbste/service/ClientService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mbste/service/ClientService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mbste/service/NotificationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mbste/service/NotificationService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mbste/service/impl/AppoitementServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mbste/service/impl/AppoitementServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/AppoitementDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/AppoitementDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wowe3_manifest.yml" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mbste/service/impl/ClientServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mbste/service/impl/ClientServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mbste/service/impl/NotificationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mbste/service/impl/NotificationServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/mbste.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/mbste.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/mbste.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/mbste.jar.original" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,6 +73,9 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
   <component name="ProjectId" id="1TQtqqAOGHMEBJEPlOD5yMETduh" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -83,11 +100,11 @@
       <recent name="com.mbste.model" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Egene\Desktop\woowe\wowe -new" />
       <recent name="C:\Users\Oops\Documents\wowe -new\src\main\resources\mapper" />
       <recent name="C:\Users\Oops\Documents\wowe -new\src\main\java\com\mbste\model\filters" />
       <recent name="C:\Users\Oops\Documents\mbste\filehandle\src\main\resources" />
       <recent name="C:\Users\Oops\Documents\mbste\src\main\java\com\mbste\commons\security" />
-      <recent name="C:\Users\Oops\Documents\mbste\src\main\java\com\mbste\commons" />
     </key>
   </component>
   <component name="RunAnythingCache">

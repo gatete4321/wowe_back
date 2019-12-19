@@ -40,4 +40,6 @@ public interface  ClientService
 
 
     public int createTable();
+
+    int dropTable();
 }
