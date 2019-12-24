@@ -41,6 +41,10 @@
             AND service_id=#{serviceId}
         </if>
 
+        <if test="clientLocation!=null">
+            AND client_location=#{clientLocation}
+        </if>
+
     </sql>
 
 
@@ -51,6 +55,21 @@
         </if>
         <if test="phoneNumber!=null">
             phone_number=#{phoneNumber}
+        </if>
+        <if test="profileImage!=null">
+            profile_image=#{profileImage}
+        </if>
+        <if test="serviceId!=null">
+            service_id=#{serviceId}
+        </if>
+        <if test="clientAbout!=null">
+            client_about=#{clientAbout}
+        </if>
+        <if test="clientLocation!=null">
+            client_location=#{clientLocation}
+        </if>
+        <if test="rates!=null">
+            rates=#{rates}
         </if>
     </sql>
 
@@ -88,7 +107,7 @@
     <update id="updateClient" parameterType="map">
         UPDATE clients SET
         <include refid="update_filter"/>
-        WHERE client_id=#{clientId} and status!=99
+        WHERE client_id=#{clientId} OR username=#{username}
     </update>
     <select id="count" resultType="int">
         SELECT COUNT(*) FROM clients WHERE 1=1
@@ -114,8 +133,8 @@
         username varchar(12) NOT NULL,
         client_about varchar(12) DEFAULT NULL,
         password varchar(15) NOT NULL,
-        email varchar(15) NOT NULL,
-        profile_image varchar(15) DEFAULT NULL,
+        email varchar(25) NOT NULL,
+        profile_image varchar(30) DEFAULT NULL,
         phone_number varchar(12) NOT NULL,
         status int(3) NOT NULL DEFAULT 1,
         client_location varchar(15) DEFAULT NULL,
@@ -127,4 +146,8 @@
     <delete id="dropTable">
         DROP TABLE IF EXISTS clients;
     </delete>
+
+    <select id="getTechImage" parameterType="java.lang.Integer" resultType="java.lang.String">
+        SELECT profile_image FROM clients WHERE client_id=#{clientId} AND status!=99
+    </select>
 </mapper>

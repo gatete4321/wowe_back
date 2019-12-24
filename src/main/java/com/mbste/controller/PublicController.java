@@ -3,7 +3,11 @@ package com.mbste.controller;
 import com.mbste.ExceptionH.NotFoundException;
 import com.mbste.commons.security.ClientAuthenticationService;
 import com.mbste.commons.utils.ReturnUtil;
+import com.mbste.model.Appoitement;
 import com.mbste.model.Client;
+import com.mbste.model.ClientFilter;
+import com.mbste.model.Cnt;
+import com.mbste.model.filters.AppoitementFilter;
 import com.mbste.model.filters.ClientForm;
 import com.mbste.model.filters.LoginForm;
 import com.mbste.service.ApoitementService;
@@ -17,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -96,6 +101,15 @@ public class PublicController {
         apoitementService.dropTable();
         clientService.dropTable();
         return apoitementService.createTable()|notificationService.createTable()|clientService.createTable();
+    }
+
+    /**
+     * get technicians
+     * @return
+     */
+    @PostMapping(value = "/clients/all", produces = "application/json;charset=UTF-8")
+    public List<Cnt> getAll(@RequestBody ClientFilter filter) {
+        return clientService.getAll(filter);
     }
 
 }

@@ -1,17 +1,17 @@
 applications:
-- name: wowe3
-  disk_quota: 1G
-  instances: 1
-  memory: 1G
-  path: target/mbste.jar
-  routes:
-  - route: wowe3.cfapps.io
-  services:
-  - wowe
-  stack: cflinuxfs3
-
-
-#buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  - name: wowe2
+    disk_quota: 1G
+    instances: 1
+    memory: 1G
+    env:
+      JAVA_OPTS: -Djava.security.egd=file:/dev/./urandom
+      SPRING_PROFILES_ACTIVE: cloud
+    path: target/mbste.jar
+    routes:
+      - route: wowe2.cfapps.io
+    services:
+      - wowe
+    stack: cflinuxfs3
 
 env:
   JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{enabled: false}'

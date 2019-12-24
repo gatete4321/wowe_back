@@ -16,6 +16,16 @@ public class ClientFilter extends SearchForm
 
     private Integer serviceId;
 
+    private String clientLocation;
+
+    public String getClientLocation() {
+        return clientLocation;
+    }
+
+    public void setClientLocation(String clientLocation) {
+        this.clientLocation = clientLocation;
+    }
+
     public Integer getServiceId() {
         return serviceId;
     }

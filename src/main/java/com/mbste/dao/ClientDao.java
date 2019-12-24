@@ -45,4 +45,6 @@ public interface ClientDao {
     int createTable();
 
     int dropTable();
+
+    String getTechImage(Integer clientId);
 }

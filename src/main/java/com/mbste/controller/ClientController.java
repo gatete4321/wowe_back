@@ -51,20 +51,11 @@ public class ClientController {
         return clientService.changePassword(clientForm);
     }
 
+
+
     @PostMapping(value = "/profile", produces = "application/json;charset=UTF-8")
     public String changeProfileImage(@RequestBody ClientForm clientForm) {
         return clientService.changeProfileImage(clientForm);
-    }
-
-    /**
-     * get technicians
-     *
-     * @return
-     */
-    @PostMapping(value = "/all", produces = "application/json;charset=UTF-8")
-    public List<Cnt> getAll(@RequestBody ClientFilter filter) {
-
-        return clientService.getAll(filter);
     }
 
     @PostMapping(value = "/checkUsername", produces = "application/json;charset=UTF-8")
@@ -78,4 +69,9 @@ public class ClientController {
 //    public int createTable(){
 //        return clientService.createTable();
 //    }
+
+    @PostMapping(value = "/techImage", produces = "application/json;charset=UTF-8")
+    public String techImage(@RequestBody Integer clientId){
+        return dao.getTechImage(clientId);
+    }
 }
