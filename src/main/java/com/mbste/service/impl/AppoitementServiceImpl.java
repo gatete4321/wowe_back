@@ -140,7 +140,8 @@ public class AppoitementServiceImpl implements ApoitementService {
         notification.setAppoitementId(form.getAppoitementId());
         notification.setUwayikozeId(form.getClientId());
         notification.setUyikoreweId(form.getTechId());
-        notification.setUwayikozeName(form.getTechName());
+        notification.setUwayikozeName(form.getUyikozeName());
+//        notification.setServiceId(form.getServiceId());
 
         return notificationService.createNotification(notification);
 

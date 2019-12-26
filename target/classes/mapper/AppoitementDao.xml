@@ -93,7 +93,7 @@
         done_time datetime NOT NULL,
         feedback varchar(21) NOT NULL DEFAULT '  ',
         rate int(3) NOT NULL DEFAULT 1,
-        plaque varchar(8) NOT NULL DEFAULT ' ',
+        plaque varchar(10) NOT NULL DEFAULT ' ',
         PRIMARY KEY (appoitement_id)
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
     </update>
