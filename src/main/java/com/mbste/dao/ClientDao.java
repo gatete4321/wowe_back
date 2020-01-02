@@ -40,11 +40,13 @@ public interface ClientDao {
 
     public String findImageById(Integer clientId);
 
-    String getPassword(Integer clientId);
+    String getPasswordEmail(Integer clientId);
 
     int createTable();
 
     int dropTable();
 
     String getTechImage(Integer clientId);
+
+    String getPasswordEmail(String email);
 }

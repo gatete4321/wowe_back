@@ -150,4 +150,8 @@
     <select id="getTechImage" parameterType="java.lang.Integer" resultType="java.lang.String">
         SELECT profile_image FROM clients WHERE client_id=#{clientId} AND status!=99
     </select>
+
+    <select id="getPasswordEmail" parameterType="java.lang.String" resultType="java.lang.String">
+        SELECT password FROM clients where email=#{email}
+    </select>
 </mapper>

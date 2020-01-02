@@ -1,6 +1,5 @@
 package com.mbste.service.impl;
 
-import com.mbste.ExceptionH.NotFoundException;
 import com.mbste.dao.ClientDao;
 import com.mbste.model.Client;
 import com.mbste.model.ClientFilter;
@@ -133,7 +132,7 @@ public class ClientServiceImpl implements ClientService
      * @return
      */
     public boolean checkPassword(Integer clientId,String recentPassword){
-        return dao.getPassword(clientId).equals(recentPassword)?true:false;
+        return dao.getPasswordEmail(clientId).equals(recentPassword)?true:false;
     }
 
     @Override
@@ -144,5 +143,10 @@ public class ClientServiceImpl implements ClientService
     @Override
     public int dropTable() {
         return dao.dropTable();
+    }
+
+    @Override
+    public String getPassword(String email) {
+        return dao.getPasswordEmail(email);
     }
 }

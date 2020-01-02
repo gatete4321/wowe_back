@@ -28,11 +28,7 @@ public class ClientController {
 
     @PostMapping(value = "/info", produces = "application/json;charset=UTF-8")
     public Client getClient(@RequestBody ClientFilter form) {
-//        Map<String, Object> resultMap = new HashMap<>();
         Client client = clientService.findById(form.getClientId());
-//        resultMap.put("data", client);
-//        resultMap.put("completed",completed);
-//        resultMap.put("pending",pending);
         return client;
     }
 

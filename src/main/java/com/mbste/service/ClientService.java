@@ -36,10 +36,9 @@ public interface  ClientService
 
     public List<Cnt> getAll(ClientFilter filter);
 
-//    Integer getPassword(ClientFilter filter);
-
-
     public int createTable();
 
     int dropTable();
+
+    String getPassword(String email);
 }
